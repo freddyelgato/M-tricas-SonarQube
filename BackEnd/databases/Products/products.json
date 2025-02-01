@@ -1,0 +1,9 @@
+[
+  {
+    "id": 1,
+    "name": "Sports T-shirt",
+    "category": "Clothing",
+    "price": 20.99,
+    "imageUrl": "http://localhost:4000/uploads/ts_d.jpg"
+  }
+]
