@@ -5,5 +5,19 @@
     "category": "Clothing",
     "price": 20.99,
     "imageUrl": "http://localhost:4000/uploads/ts_d.jpg"
+  },
+  {
+    "id": "a10e528d-a9cc-4cdb-acf2-7fbb4627d9de",
+    "name": "Jorge Galeas",
+    "price": 39999,
+    "category": "Shirt",
+    "imageUrl": "http://localhost:4000/uploads/1738434938604.jpg"
+  },
+  {
+    "id": "dd7904dc-1f3b-4af6-b1b9-e2ec7d1c5256",
+    "name": "Jorge Galeas",
+    "price": 39999,
+    "category": "Shirt",
+    "imageUrl": "http://localhost:4000/uploads/1738460974691.jpg"
   }
 ]

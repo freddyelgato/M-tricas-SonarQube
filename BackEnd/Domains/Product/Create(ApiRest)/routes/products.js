@@ -33,13 +33,18 @@ router.post('/', upload.single('image'), async (req, res) => {
       return res.status(400).json({ status: 'error', message: 'Product name, price, and category are required' });
     }
 
-        // Ruta correcta desde 'Domains/Product/'
-    const filePath = path.resolve(__dirname, '../../../../../databases/Products/products.json');
+    // Ruta correcta desde 'Domains/Product/'
+    const filePath = path.resolve(__dirname, '../../../../databases/Products/products.json');
     console.log('Archivo JSON en:', filePath);  // Verifica la ruta generada
+
+    // Verificamos si el archivo JSON existe. Si no, lo creamos con un arreglo vacío.
+    if (!fs.existsSync(filePath)) {
+      fs.writeFileSync(filePath, JSON.stringify([])); // Creamos el archivo vacío si no existe
+      console.log('Archivo products.json creado.');
+    }
 
     // Leemos el archivo JSON donde se guardan los productos
     const products = JSON.parse(fs.readFileSync(filePath, 'utf-8')); // Leemos el archivo .json
-
 
     // Creamos un nuevo producto
     const newProduct = {

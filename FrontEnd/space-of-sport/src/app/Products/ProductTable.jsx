@@ -17,13 +17,13 @@ const ProductTable = ({ products, onDelete, onEdit }) => {
         </thead>
         <tbody>
           {products.map(product => (
-            <tr key={product._id}>
+            <tr key={product.id}>
               <td>{product.name}</td>
               <td>{product.category}</td>
               <td>${product.price}</td>
               <td><img src={product.imageUrl} alt={product.name} width="50" /></td>
               <td>
-                <ProductActions product={product} onDelete={onDelete} onEdit={onEdit} />
+                <ProductActions product={product} onDelete={product.id} onEdit={onEdit} />
               </td>
             </tr>
           ))}
